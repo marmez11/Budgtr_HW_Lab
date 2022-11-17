@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Index File</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script defer src="/Day_2/budgtr_HW_Lab/server.js""></script>
+    <link rel="stylesheet" href="/Day_2/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="/Day_2/Skeleton-2.0.4/css/skeleton.css">
+</head>
+<body>
+    <h1>Budgtr ALL</h1>
+    <div class = "container" >
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>From</th>
+                <th>Amount</th>
+                <th>Tags</th>
+            </tr>
+            <% for(let i = 0; i < budget.length; i++) { %>
+                <tr>
+                    <td><%=budget[i].date %> </td>
+                    <td><a href = "/budgets/<%=i%>"><%=budget[i].name %></a></td>
+                    <td><%=budget[i].from %></td>
+                    <td>$<%=budget[i].amount %>.00</td>
+                    <td><%=budget[i].tags %></td>
+                </tr>
+            <% } %> 
+        </table>
+    </div>
+    <button type="button"><a href="/budgets/new">New Item</a></button> 
+
+   <!-- <table>
+            <th>Date</th>
+       <% for(let i = 0; i < budget.length; i++) { %>
+            <tr>
+                <td><%=budget[i].date %>&nbsp;&nbsp;&nbsp;<a><%=budget[i].name %></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<%=budget[i].amount %>.00</td>
+            </tr>
+           <% } %>
+    </table>-->
+</body>
+</html>

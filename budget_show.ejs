@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script defer src="/Day_2/budgtr_HW_Lab/server.js""></script>
+    <link rel="stylesheet" href="/Day_2/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="/Day_2/Skeleton-2.0.4/css/skeleton.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%=budget.name %></h1>
+    <div class="container">
+    <a href="/budgets">Back</a>
+    <ul>
+    <h1>date</h1>
+        <li><%=budget.date %></li>
+    <h1>name</h1>
+        <li><%=budget.name %></li>
+    <h1>amount</h1>
+        <li>$<%=budget.amount %>.00</li>
+    <h1>tags</h1>
+        <li><%=budget.tags %></li>
+    </ul>
+    </div>
+</body>
+</html>

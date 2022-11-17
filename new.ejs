@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Index File</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="/Day_2/budgtr_HW_Lab/server.js"></script>
+    <link rel="stylesheet" href="/Day_2/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="/Day_2/Skeleton-2.0.4/css/skeleton.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Creating new Item</h1>
+        <form action="/budgets" method="post">
+            <input class="date" type="text" placeholder="Enter a Date (in text version...(Example: April 1))">
+            <br>
+            <input class="name" type="text" placeholder="Enter a Name of Product (in text version...(Example: Asprin))">
+            <br>
+            <input class="from" type="text" placeholder="Enter an From location for a Product (in text version...(Example: Government)">
+            <br>
+            <input class="amount" type="text" placeholder="Enter an Amount for a Product (in text version...(Example: 100))">
+            <br>
+            <input class="tags" type="text" placeholder="Enter Tags for a Product (in array/text version...(Example: text, help or ['text','help']))">
+            <br>
+            <input type="submit" value="Create New Item">
+        </form>
+        <!--<button type="button"><a href="/new">Create New Item</a></button>-->
+    </div>
+</body>
+</html>
